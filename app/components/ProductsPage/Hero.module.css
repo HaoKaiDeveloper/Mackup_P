@@ -1,0 +1,98 @@
+.main {
+  width: 100%;
+  height: 60vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  perspective: 10px;
+}
+
+.header {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  z-index: -1;
+}
+
+.header img {
+  transform: translateZ(-10px) scale(2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.header h1 {
+  font-size: 8rem;
+  color: rgba(255, 255, 255, 0.6);
+  /* text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); */
+  position: absolute;
+}
+
+.header h1:nth-of-type(1) {
+  left: 30%;
+  top: 10%;
+  animation: moveCircle 5s 0.7s linear infinite;
+}
+
+.header h1:nth-of-type(2) {
+  right: 30px;
+  bottom: 15%;
+  animation: moveCircle 5s 0.7s linear infinite;
+}
+
+.header h1:nth-of-type(3) {
+  left: 7%;
+  bottom: -7%;
+  animation: moveCircle 5s 0.7s linear infinite;
+}
+
+.animationCircle {
+  animation: moveCircle 5s 0.7s linear infinite;
+}
+
+@media screen and (max-width: 800px) {
+  .main {
+    perspective: 30px;
+  }
+
+  .header h1 {
+    font-size: var(--f-l);
+  }
+}
+@media screen and (max-width: 400px) {
+  .header h1:nth-of-type(1) {
+    left: 30%;
+    top: 10%;
+    animation: moveCircle 5s 0.7s linear infinite;
+  }
+
+  .header h1:nth-of-type(2) {
+    right: 30px;
+    bottom: 20%;
+    animation: moveCircle 5s 0.7s linear infinite;
+  }
+
+  .header h1:nth-of-type(3) {
+    left: 7%;
+    bottom: 40%;
+    animation: moveCircle 5s 0.7s linear infinite;
+  }
+}
+
+@keyframes moveCircle {
+  0% {
+    transform: rotate(0deg) translate(10px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(10px) rotate(-360deg);
+  }
+}
+
+.main::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}

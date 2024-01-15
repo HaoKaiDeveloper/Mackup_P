@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-1: #aa0f0f;
+  --primary-2: #fbe9e7;
+  --brown-1: #d4ae03;
+
+  --blueGrey: #a4bac4;
+
+  --grey-1: #fafafa;
+  --grey-2: #eeeeee;
+  --grey-3: #bdbdbd;
+  --grey-4: #616161;
+  --grey-5: #212121;
+
+  --f-s: 2rem;
+  --f-mi: 3rem;
+  --f-l: 4rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lora", serif;
+  font-family: "Poppins", sans-serif;
+}
+
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+.flex-between {
+  @apply flex items-center justify-between;
+}

@@ -1,0 +1,44 @@
+.main {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: #faeef1e8;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 10px;
+}
+.main a,
+.cart_btn {
+  color: var(--grey-4);
+  font-size: 25px;
+  position: relative;
+}
+.cart_btn::before {
+  content: attr(data-itemsnum);
+  position: absolute;
+  top: -7px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--primary-1);
+  color: var(--grey-1);
+  border-radius: 50%;
+  font-size: 15px;
+}
+.main a:first-child {
+  color: var(--primary-1);
+  flex: 1;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 400px) {
+  .main a:not(:first-child) {
+    font-size: 20px;
+  }
+}

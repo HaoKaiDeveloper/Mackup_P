@@ -1,0 +1,35 @@
+.products {
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.cards {
+  padding: 30px 40px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 250px);
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: center;
+  gap: 30px;
+}
+
+.pageBtn {
+  font-size: var(--f-s);
+  padding: 5px 15px;
+  border-radius: 20px;
+  border: 1px solid var(--grey-3);
+  background-color: var(--grey-2);
+  color: var(--c-blue-grey);
+  border: none;
+}
+.pageBtn:hover {
+  background-color: var(--primary-1);
+  color: var(--grey-1);
+}
+
+@media screen and (max-width: 850px) {
+  .cards {
+    grid-template-columns: repeat(auto-fill, 250px);
+    grid-template-rows: repeat(auto-fill, 1fr);
+  }
+}
